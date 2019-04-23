@@ -4,8 +4,8 @@
     <div class="user_menu">
       <mat-nav-list>
         <a mat-list-item>
-          <img class="jim" [routerLink]="['/profile']" routerLinkActive="active" src="https://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/06/21/931/524/694940094001_5800293009001_5800284148001-vs.jpg?ve=1&tl=1" alt="">
-          <span [@animateText]="linkText ? 'show' : 'hide'">{{ page?.name }} </span>
+          <img class="jim" style="padding-right:5px;" [routerLink]="['/profile']" routerLinkActive="active" src="https://s.gravatar.com/avatar/4c6a92fbf417a3a928ddbee8c1cd291d?s=80" alt="">
+          <span [@animateText]="linkText ? 'show' : 'hide'">Praveen</span>
         </a>
       </mat-nav-list>
       <mat-divider></mat-divider>
@@ -22,7 +22,7 @@
   </div>
 
   <span class="spacer"></span>
-  <div fxLayout="row" fxLayoutAlign="end center" style="padding: 0px 10px;">
+  <div fxLayout="row" fxLayoutAlign="center end" style="padding: 00px 10px;">
     <button mat-icon-button (click)="onSinenavToggle()">
       <mat-icon *ngIf="sideNavState">arrow_left</mat-icon>
       <mat-icon *ngIf="!sideNavState">arrow_right</mat-icon>
