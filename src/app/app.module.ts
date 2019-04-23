@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material.module';
 
@@ -14,6 +15,9 @@ import { InboxComponent } from './inbox/inbox.component';
 import { SendComponent } from './send/send.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StarComponent } from './star/star.component';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { EnvironmentUrlService } from 'src/app/shared/services/environment-url.service';
+import { RepositoryService } from 'src/app/shared/services/repository.service';
 
 @NgModule({
   declarations: [
@@ -24,16 +28,18 @@ import { StarComponent } from './star/star.component';
     InboxComponent,
     SendComponent,
     ProfileComponent,
-    StarComponent
+    StarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [EnvironmentUrlService, RepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

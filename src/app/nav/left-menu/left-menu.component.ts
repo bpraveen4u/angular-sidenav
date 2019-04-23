@@ -20,6 +20,7 @@ export class LeftMenuComponent implements OnInit {
   public linkText: boolean = false;
 
   public pages: Page[] = [
+    {name: 'users', link:'users/list', icon: 'inbox'},
     {name: 'Inbox', link:'inbox', icon: 'inbox'},
     {name: 'Starred', link:'star', icon: 'star'},
     {name: 'Send email', link:'send', icon: 'send'}
